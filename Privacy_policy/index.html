@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CraftCrest Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #800020; /* Burgundy */
+            --secondary-color: #A52A2A; /* Brownish Burgundy */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #1F2937;
+            --light-bg: #FFF5F5; /* Very light red tint */
+            --border-color: #E5E7EB;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --danger-color: #DC2626;
+            --info-color: #3B82F6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(128, 0, 32, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #6B7280;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="50" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="30" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .content {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(128, 0, 32, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(128, 0, 32, 0.12);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+        }
+
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .subsection p, .subsection li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            background-color: rgba(255, 215, 0, 0.15);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .contact-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .info-box {
+            background-color: rgba(128, 0, 32, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background-color: rgba(220, 38, 38, 0.05);
+            border-left: 4px solid var(--danger-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box {
+            background-color: rgba(16, 185, 129, 0.05);
+            border-left: 4px solid var(--success-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box p, .warning-box p, .success-box p {
+            margin: 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab {
+            padding: 0.8rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .no-sharing {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .no-sharing i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--success-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .tabs {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-store"></i>
+                    CraftCrest Marketplace
+                </div>
+                <div class="last-updated">
+                    <i class="fas fa-calendar-alt"></i>
+                    Last Updated: October 28, 2025
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is our priority. This comprehensive Privacy Policy explains how CraftCrest Marketplace collects, uses, stores, and protects your information when you use our app and services.</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-info-circle"></i>
+                    <h2>1. Introduction & Scope</h2>
+                </div>
+                <p>Welcome to CraftCrest Marketplace, an e-commerce platform connecting talented artisans with craft enthusiasts in kenya. This Privacy Policy governs your use of our mobile application, website, and all related services (collectively, the "Service").</p>
+                <p>This policy applies to all users of CraftCrest Marketplace, including buyers, sellers and any other individuals who interact with our platform. By using CraftCrest Marketplace, you agree to the collection and use of information in accordance with this policy.</p>
+                
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab(event, 'who-we-are')">Who We Are</button>
+                    <button class="tab" onclick="switchTab(event, 'what-this-covers')">What This Covers</button>
+                    <button class="tab" onclick="switchTab(event, 'legal-basis')">Legal Basis</button>
+                </div>
+                
+                <div id="who-we-are" class="tab-content active">
+                    <p>CraftCrest Marketplace is operated by CraftCrest Team., a team dedicated to supporting independent artisans and crafters. We provide a platform for:</p>
+                    <ul>
+                        <li>Selling handmade and custom craft items</li>
+                        <li>Connecting buyers with unique, artisanal products</li>
+                        <li>Facilitating secure transactions and communications</li>
+                        <li>Building a community around craft and creativity</li>
+                    </ul>
+                </div>
+                
+                <div id="what-this-covers" class="tab-content">
+                    <p>This privacy policy covers:</p>
+                    <ul>
+                        <li>Data collection through our mobile apps ( Android)</li>
+                        <li>Information gathered through our website</li>
+                        <li>Data collected during transactions and communications</li>
+                        <li>Third-party integrations and services</li>
+                    </ul>
+                </div>
+                
+                <div id="legal-basis" class="tab-content">
+                    <p>Our legal basis for processing personal information includes:</p>
+                    <ul>
+                        <li><strong>Contractual Necessity:</strong> To provide our services and fulfill transactions</li>
+                        <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+                        <li><strong>Legitimate Interest:</strong> For fraud prevention, security, and service improvement</li>
+                        <li><strong>Consent:</strong> For marketing communications and non-essential data processing</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Important Note:</strong> This privacy policy is part of our broader commitment to transparency and user privacy. It should be read alongside our Terms of Service, Cookie Policy, and Community Guidelines.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-database"></i>
+                    <h2>2. Information We Collect</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Personal Information</h3>
+                    <p>When you create an account or use our services, we may collect:</p>
+                    <ul>
+                        <li><strong>Identity Information:</strong> Full name, username, profile photo, date of birth</li>
+                        <li><strong>Contact Information:</strong> Email address, phone number, mailing address</li>
+                        <li><strong>Financial Information:</strong> Payment methods (processed securely)</li>
+                        <li><strong>Verification Documents:</strong> Government-issued ID (for seller verification)</li>
+                        <li><strong>Biometric Data:</strong> Facial recognition data (for account security features)</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Marketplace-Specific Information</h3>
+                    <p>As a marketplace platform, we also collect:</p>
+                    <ul>
+                        <li><strong>Seller Data:</strong> Shop details, product listings, inventory management, sales history</li>
+                        <li><strong>Buyer Data:</strong> Purchase history, wishlist items, browsing behavior, saved searches</li>
+                        <li><strong>Transaction Data:</strong> Order details, payment information, returns</li>
+                        <li><strong>Reviews & Ratings:</strong> Both given and received, with timestamps</li>
+                        <li><strong>Communications:</strong> Messages between buyers and sellers, support tickets</li>
+                        <li><strong>Preferences:</strong> Language preferences, currency choices</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Technical & Usage Data</h3>
+                    <p>We automatically collect information about how you interact with our app:</p>
+                    <ul>
+                        <li><strong>Device Information:</strong> Device type, model, operating system, unique device identifiers</li>
+                        <li><strong>App Usage:</strong> Features used, time spent, session duration, crash reports</li>
+                        <li><strong>Location Data:</strong> GPS location (with permission), IP address, general location</li>
+                        <li><strong>Network Information:</strong> Carrier, connection type, signal strength</li>
+                        <li><strong>Performance Data:</strong> Load times, response rates, error logs</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Sessions & Tracking Technologies</h3>
+                    <p>We use various tracking technologies:</p>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4><i class="fas fa-cookie"></i> Sessions</h4>
+                            <p>Essential for functionality, authentication, and preferences</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h4><i class="fas fa-chart-line"></i> Analytics Pixels</h4>
+                            <p>To measure user engagement and app performance</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Social Media & Third-Party Integrations</h3>
+                    <p>When you connect social media accounts or use third-party services:</p>
+                    <ul>
+                        <li>Social media profile information (when you choose to connect)</li>
+                        <li>Third-party authentication data (Google, Facebook, Apple Sign-In)</li>
+                        <li>Integration data from shipping carriers, payment processors</li>
+                        <li>Marketing platform data (email services, analytics tools)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    <h2>3. How We Use Your Information</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Primary Service Purposes</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Purpose</th>
+                                    <th>Data Used</th>
+                                    <th>Legal Basis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Account Management</td>
+                                    <td>Name, email, password, preferences</td>
+                                    <td>Contractual</td>
+                                </tr>
+                                <tr>
+                                    <td>Transaction Processing</td>
+                                    <td>Payment info, shipping details, order data</td>
+                                    <td>Contractual</td>
+                                </tr>
+                                <tr>
+                                    <td>Product Recommendations</td>
+                                    <td>Browsing history, purchases, wishlist</td>
+                                    <td>Legitimate Interest</td>
+                                </tr>
+                                <tr>
+                                    <td>Communication</td>
+                                    <td>Contact info, message history</td>
+                                    <td>Contractual</td>
+                                </tr>
+                                <tr>
+                                    <td>Fraud Prevention</td>
+                                    <td>Device info, location, transaction patterns</td>
+                                    <td>Legitimate Interest</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Secondary Purposes</h3>
+                    <ul>
+                        <li><strong>Service Improvement:</strong> Analyzing usage patterns to enhance features</li>
+                        <li><strong>Research & Development:</strong> Developing new features and services</li>
+                        <li><strong>Analytics:</strong> Understanding user behavior and preferences</li>
+                        <li><strong>Compliance:</strong> Meeting legal and regulatory requirements</li>
+                        <li><strong>Dispute Resolution:</strong> Resolving conflicts between users</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Automated Decision Making</h3>
+                    <p>We use automated systems for:</p>
+                    <ul>
+                        <li>Fraud detection and prevention</li>
+                        <li>Product recommendations and personalization</li>
+                        <li>Search result ranking</li>
+                        <li>Risk assessment for sellers</li>
+                    </ul>
+                    <div class="warning-box">
+                        <p><strong>Note:</strong> You have the right to request human review of significant automated decisions that affect you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-share-alt"></i>
+                    <h2>4. Information Sharing & Disclosure</h2>
+                </div>
+                
+                <div class="no-sharing">
+                    <i class="fas fa-lock"></i>
+                    <p>We Do Not Share Your Personal Information</p>
+                </div>
+                
+                <p>At CraftCrest Marketplace, we are committed to protecting your privacy. We do not share, sell, or rent your personal information with third parties for their marketing purposes.</p>
+                
+                <div class="subsection">
+                    <h3>Limited Exceptions</h3>
+                    <p>We may only share your information in the following limited circumstances:</p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> With trusted third parties who help us operate our service, such as payment processors and shipping carriers, but only the minimum information necessary to complete the transaction</li>
+                        <li><strong>Legal Requirements:</strong> When required by law, court order, or to protect our rights and safety</li>
+                        <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale, user data may be transferred as part of the transaction</li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <p><strong>Our Commitment:</strong> We do not sell your personal information to third parties for their marketing purposes without your explicit consent.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>5. Data Security & Protection</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Security Measures</h3>
+                    <p>We implement multiple layers of security:</p>
+                    <ul>
+                        <li><strong>Encryption:</strong> AES-256 encryption for data at rest and TLS 1.3 for data in transit</li>
+                        <li><strong>Access Controls:</strong> Role-based access, multi-factor authentication for staff</li>
+                        <li><strong>Monitoring:</strong> 24/7 security monitoring and intrusion detection</li>
+                        <li><strong>Regular Audits:</strong> Quarterly security assessments and penetration testing</li>
+                        <li><strong>Compliance:</strong> PCI DSS, GDPR, CCPA compliance measures</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Data Breach Response</h3>
+                    <p>In the event of a data breach:</p>
+                    <ul>
+                        <li>We will notify affected users within 72 hours (as required by law)</li>
+                        <li>We will provide information about the breach and its impact</li>
+                        <li>We will outline steps taken to mitigate the breach</li>
+                        <li>We will provide recommendations for protecting your account</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>International Data Transfers</h3>
+                    <p>Your information may be stored and processed in:</p>
+                    <ul>
+                        <li>United States (primary location)</li>
+                        <li>European Union (for EU users)</li>
+                        <li>Other countries with adequate data protection laws</li>
+                    </ul>
+                    <p>We ensure appropriate safeguards including Standard Contractual Clauses (SCCs) and adherence to Privacy Shield principles where applicable.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-clock"></i>
+                    <h2>6. Data Retention</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>90-Day Retention Policy</h3>
+                    <p>At CraftCrest Marketplace, we follow a strict 90-day data retention policy:</p>
+                    <ul>
+                        <li>All user information is automatically deleted after 90 days of collection</li>
+                        <li>This includes personal data, transaction records, and usage information</li>
+                        <li>The deletion process is permanent and irreversible</li>
+                        <li>No backup copies are retained beyond the 90-day period</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Exceptions to 90-Day Policy</h3>
+                    <p>The only exceptions to our 90-day retention policy are:</p>
+                    <ul>
+                        <li>Information required to be retained longer by law (e.g., tax records)</li>
+                        <li>Data involved in ongoing legal disputes or investigations</li>
+                        <li>Information that has been anonymized and no longer identifies you</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Important:</strong> If you wish to delete your information before the 90-day period, you can request immediate deletion through your account settings or by contacting our support team.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-user-check"></i>
+                    <h2>7. Your Rights & Choices</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Data Subject Rights <span class="badge">GDPR/CCPA</span></h3>
+                    <p>You have the following rights:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of your personal data</li>
+                        <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
+                        <li><strong>Erasure:</strong> Request deletion of your personal data</li>
+                        <li><strong>Portability:</strong> Receive your data in a machine-readable format</li>
+                        <li><strong>Restriction:</strong> Limit how we process your data</li>
+                        <li><strong>Objection:</strong> Object to certain processing activities</li>
+                        <li><strong>Withdraw Consent:</strong> Revoke consent for marketing</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>How to Exercise Your Rights</h3>
+                    <p>You can exercise your rights by:</p>
+                    <ul>
+                        <li>Using the privacy settings in your account</li>
+                        <li>Emailing us at craftcrmarket@gmail.com</li>
+                        <li>Submitting a request through our privacy portal</li>
+                        <li>Calling our privacy hotline</li>
+                    </ul>
+                    <p>We will respond to your request within 30 days (or as required by law).</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Privacy Controls</h3>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4><i class="fas fa-eye-slash"></i> Visibility Settings</h4>
+                            <p>Control who can see your profile and activity</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-ad"></i> Ad Personalization</h4>
+                            <p>Opt out of personalized advertising</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-download"></i> Data Download</h4>
+                            <p>Request a copy of all your data</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-trash"></i> Data Deletion</h4>
+                            <p>Delete your data before the 90-day period</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-child"></i>
+                    <h2>8. Children's Privacy</h2>
+                </div>
+                <p>CraftCrest Marketplace is not intended for children under 13 years of age (or under 16 in the EU). We do not knowingly collect personal information from children under these ages.</p>
+                
+                <div class="subsection">
+                    <h3>Parental Controls</h3>
+                    <p>If you are a parent or guardian:</p>
+                    <ul>
+                        <li>You can request deletion of your child's information</li>
+                        <li>You can restrict data collection for your child's account</li>
+                        <li>You can review and approve your child's public profile</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <p><strong>Important:</strong> If you believe your child has provided us with personal information, please contact us immediately at craftcrmarket@gmail.com.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-comments"></i>
+                    <h2>9. User-Generated Content & Public Information</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Public Information</h3>
+                    <p>The following information is publicly visible:</p>
+                    <ul>
+                        <li>Your username and profile picture</li>
+                        <li>Your shop name and description</li>
+                        <li>Product listings and descriptions</li>
+                        <li>Reviews you give and receive</li>
+                        <li>Public collections and favorites</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Content Rights</h3>
+                    <p>By posting content on CraftCrest:</p>
+                    <ul>
+                        <li>You grant us a license to display and distribute your content</li>
+                        <li>You retain ownership of your original content</li>
+                        <li>You represent you have the right to post such content</li>
+                        <li>You agree to our content guidelines and policies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-gavel"></i>
+                    <h2>10. Legal & Regulatory Compliance</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Applicable Regulations</h3>
+                    <p>We comply with:</p>
+                    <ul>
+                        <li><strong>GDPR:</strong> General Data Protection Regulation (EU)</li>
+                        <li><strong>CCPA:</strong> California Consumer Privacy Act</li>
+                        <li><strong>CPRA:</strong> California Privacy Rights Act</li>
+                        <li><strong>PIPEDA:</strong> Personal Information Protection Act (Canada)</li>
+                        <li><strong>LGPD:</strong> Lei Geral de Proteção de Dados (Brazil)</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>International Transfers</h3>
+                    <p>For international data transfers, we use:</p>
+                    <ul>
+                        <li>Standard Contractual Clauses (SCCs)</li>
+                        <li>Adequacy decisions where available</li>
+                        <li>Binding Corporate Rules (BCRs)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-sync-alt"></i>
+                    <h2>11. Changes to This Policy</h2>
+                </div>
+                <p>We may update this Privacy Policy periodically to reflect changes in our practices or applicable law.</p>
+                
+                <div class="subsection">
+                    <h3>Notification Process</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Minor Changes</h4>
+                            <p>Posted on this page with updated date</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Significant Changes</h4>
+                            <p>Email notification 30 days before implementation</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Material Changes</h4>
+                            <p>In-app notification and explicit consent required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Your Continued Use:</strong> Continuing to use our services after changes indicates acceptance of the updated policy.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-envelope"></i>
+                    <h2>12. Contact Information</h2>
+                </div>
+                <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+                
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h4>Privacy Support Team</h4>
+                        <p><i class="fas fa-envelope"></i> Email: craftcrmarket@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> Phone: 0768175519</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Address: 616 Craft Korongo Road, karen Nairobi</p>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Specific Contacts</h3>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4><i class="fas fa-shield-alt"></i> Data Protection Officer</h4>
+                            <p>craftcrmarket@gmail.com</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-user-shield"></i> Privacy Rights Requests</h4>
+                            <p>craftcrmarket@gmail.com</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Data Breach Reports</h4>
+                            <p>craftcrmarket@gmail.com</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-gavel"></i> Legal Inquiries</h4>
+                            <p>craftcrmarket@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Response Times</h3>
+                    <ul>
+                        <li>General inquiries: 3-5 business days</li>
+                        <li>Data subject requests: 30 days (extendable to 60 if complex)</li>
+                        <li>Urgent security matters: Immediate response</li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="btn">Download PDF Version</a>
+                <a href="#" class="btn btn-secondary">Request Data Export</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 CraftCrest Marketplace. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Community Guidelines</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        function switchTab(event, tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
